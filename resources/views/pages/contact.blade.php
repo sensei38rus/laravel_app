@@ -5,10 +5,6 @@
 @section('content')
     <h1>Форма обратной связи</h1>
 
-    @if (session('success'))
-        <div class="alert-success">{{ session('success') }}</div>
-    @endif
-
     @if ($errors->any())
         <div class="alert-danger">Форма содержит ошибки. Проверьте введённые данные.</div>
     @endif

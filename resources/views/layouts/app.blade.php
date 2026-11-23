@@ -20,6 +20,13 @@
         table { border-collapse: collapse; width: 100%; }
         th, td { border: 1px solid #ccc; padding: 8px; text-align: left; vertical-align: top; }
         th { background: #f3f4f6; }
+        .pagination { display: flex; gap: 6px; list-style: none; padding: 0; }
+        .pagination a, .pagination span { padding: 4px 10px; border: 1px solid #ccc; text-decoration: none; color: inherit; display: inline-block; }
+        .pagination .active span { background: #1f2937; color: #fff; }
+        .badge { background: #e5e7eb; padding: 2px 8px; border-radius: 10px; font-size: .8rem; margin-right: 4px; }
+        .card { border: 1px solid #ddd; border-radius: 6px; padding: 12px 16px; margin-bottom: 12px; }
+        .btn-danger { background: #b91c1c; color: #fff; border: 0; }
+        select { padding: 8px; }
     </style>
     @stack('styles')
 </head>
@@ -27,6 +34,7 @@
     @include('partials.header')
 
     <main>
+        @include('partials.flash')
         @yield('content')
     </main>
 
